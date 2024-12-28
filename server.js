@@ -13,6 +13,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
+app.use('/', (req, res) => {
+    return res.status(200).json({ message: 'Hello Everyone' });
+});
+
 app.use("/api/items", itemRoutes);
 
 // Database
