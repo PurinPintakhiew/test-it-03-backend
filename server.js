@@ -13,11 +13,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
+app.use("/api/items", itemRoutes);
+
 app.use('/', (req, res) => {
     return res.status(200).json({ message: 'Hello Everyone' });
 });
-
-app.use("/api/items", itemRoutes);
 
 // Database
 mongoose.connect(process.env.MONGO_URI)
