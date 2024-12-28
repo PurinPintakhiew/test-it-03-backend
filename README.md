@@ -3,5 +3,5 @@
 ### Starter Project
 ```js
 npm install
-node server.js
+node index.js
 ```
